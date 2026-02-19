@@ -1,24 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Heart Animation Effect</title>
+const canvas = document.getElementById("heart");
+const ctx = canvas.getContext("2d");
 
-    <style>
-        canvas {
-        position: absolute;
-        left:0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0,0,0,.2);
-        }
-    </style>
-  </head>
-  <body>  
-        <canvas id="heart"></canvas>
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-        <!--JavaScript-->
-        <script src="script.js"></script>
-  </body>
-</html>
+ctx.fillStyle = "red";
+ctx.beginPath();
+ctx.arc(canvas.width / 2, canvas.height / 2, 50, 0, Math.PI * 2);
+ctx.fill();
